@@ -68,11 +68,13 @@ class ImageFigure extends Component {
         }
         return (
             <figure className={classNames} style={positionStyle} onClick={this.handleClick}>
-                <img className="figure-image" src={url} alt={title} />
-                <figcaption>
+                <div className='front'>
+                    <img className="figure-image" src={url} alt={title} />
                     <div className="figure-title">{title}</div>
+                </div>
+                <div className='back'>
                     <div className="figure-desc">{desc}</div>
-                </figcaption>
+                </div>
             </figure>
         )
     }
